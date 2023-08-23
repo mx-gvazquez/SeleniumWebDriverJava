@@ -1,0 +1,6 @@
+Dado que el explorador Chrome cambia constantemente, y 
+que el .EXE es muy pesado, decidí elimiarlo de esta carpeta.
+
+
+Si alguna vez decides descargar mi Repositorio, aquí
+deberás colocar el  chromedriver.exe.
