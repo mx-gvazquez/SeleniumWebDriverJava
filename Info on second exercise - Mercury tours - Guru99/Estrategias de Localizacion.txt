@@ -1,0 +1,47 @@
+Estrategias de Localización:
+
+	1. By.id("string")
+	2. By.name("string")
+	3. By.className("class")
+	4. By.tagName("tag")
+	5. By.linkText("string")
+	6. By.partialLinkText("string")
+	7. By.cssSelector("string")
+	8. By.xpath("string")
+	
+	9. JavaScript
+
+
+
+Ejemplos:
+
+		/*@Test void localizadores() {
+		 
+		By locator = By.id("id_del_elemento");
+		
+		By locator_name = By.name("name_elemnt");
+		
+		By locator_className = By.className("clase_elemento");
+		
+		By locator_tagName = By.tagName("tag");
+		
+		By locator_linktext = By.linkText("texto_link");
+		
+		By locator_partialLinkText = By.partialLinkText("parte_texto");
+		
+		By locator_cssSelector = By.cssSelector("input[name='q']");
+		
+		By locator_Xpath = By.xpath("//input[@name='q']");
+		
+		// JavaScript
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		 WebElement searchBox = (WebElement)js.executeScript("return document.getElementsByName('q')[0]");
+		
+		}*/
+
+
+Escenario 1. Registrar usuario.
+	// PASO 1: Clic en el botón 'REGISTER'.
+	// PASO 2: Completar campos para registrar usuario.
+	// PASO 3: Confimar mensaje de usuario registrado.
