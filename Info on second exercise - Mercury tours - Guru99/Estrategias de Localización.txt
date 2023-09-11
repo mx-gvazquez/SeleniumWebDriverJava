@@ -7,9 +7,19 @@ Estrategias de Localización:
 	5. By.linkText("string")
 	6. By.partialLinkText("string")
 	7. By.cssSelector("string")
-	8. By.xpath("string")
-	
+	8. By.xpath("string")	
 	9. JavaScript
+
+	1- By.id(“id”)
+	2- By.name("name")
+	3- By.className(“class”)
+	4- By.tagName("tag")
+	5- By.linkText("string")
+	6- By.partialLinkText("string")
+	7- By.cssSelector("input[name='q']")
+	8- By.xpath("//input[@name='q']")
+	9- JavaScript
+
 
 
 
@@ -42,6 +52,24 @@ Ejemplos:
 
 
 Escenario 1. Registrar usuario.
+
+	// PASO 0: Ir a la url: https://demo.guru99.com/test/newtours/index.php
 	// PASO 1: Clic en el botón 'REGISTER'.
 	// PASO 2: Completar campos para registrar usuario.
 	// PASO 3: Confimar mensaje de usuario registrado.
+
+
+	Keyboard Shotcuts in Eclipse:
+
+		Ctrl+Alt+Down	Copy line(s)
+		Alt+Down	Move line(s) down
+		Alt+Up	Move line(s) up
+		Ctrl+D	Delete a line
+
+Páginas de prueba
+
+	https://buggy.justtestit.org/
+	https://testingqarvn.com.es/practicas-qa/
+	https://www.federico-toledo.com/sitios-de-prueba-para-practicar/
+
+	demoqa.com

@@ -2,8 +2,7 @@ package com.qualitystream.tutorial;
 
 import static org.junit.Assert.assertEquals;
 
-import java.util.concurrent.TimeUnit;
-
+import java.time.Duration;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -27,7 +26,7 @@ public class GST {
 		driver.get("https://www.google.com/");
 	}
 
-	@SuppressWarnings("deprecation")
+	
 	@Test
 	public void testGooglePage() {
 
@@ -36,8 +35,8 @@ public class GST {
 		searchbox.clear();
 		searchbox.sendKeys("quality-stream Introducción a la Automatización de Pruebas de Software");
 		searchbox.submit();
-		
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
 		System.out.println(driver.getTitle());
 		
