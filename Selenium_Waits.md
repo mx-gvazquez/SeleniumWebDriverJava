@@ -6,8 +6,8 @@
 
 - thread.sleep(200)
 - WebDriverWait
-- Expected Conditions
-    - TimeOut Exception
+    - Expected Conditions
+        - TimeOut Exception
 
 ## Fluent wait
 - Polling Time
