@@ -20,52 +20,56 @@ public class MercuryTours_AutomatedTest {
 	private WebDriver driver;
 	
 //Dentro de la clase, pero antes de las instancias, creamos el catálogo de Localizadores
-	// #1
-	By registerLinkLocator = By.linkText("REGISTER");
-	// #2
-	By registerPageLocator = By.xpath("//img[@src='images/mast_register.gif']");
-	// #3
-	By usernameLocator = By.id("email");
-	// #4
-	By passwordLocator = By.name("password");
-	// #5
-	By confirmPasswordLocator = By.cssSelector("input[name='confirmPassword']");
-	// #6
-	By registerBtnLocator = By.name("submit");
-	// #7
-	/*
-	 * Este elemento es un tag = Font, y el que necesitamos está en la 'posición = 6', de JavaScript.
-	 * Necesitamos crear una lista de WebElementS, en PLURAL, y apuntar al índice = 5. Java cuenta desde CERO.
-	 * F12 on WebBrowser opens 'Inspector'
-	 * CRTL + F = opens search toolbar.   Así fue como supimos que hay 6 'fonts'.
-	 */
-	
-	// #8
-	By userLocator = By.name("userName");
-	// #9
-	By passLocator =By.name("password");	
-	// #10
-	By singInBtnLocator = By.name("submit");
-	// #11
-	/*
-	 * Este elemento es un tag = Font, y el que necesitamos está en la 'posición = 4/6', de JavaScript.
-	 * Necesitamos crear una lista de WebElementS, en PLURAL, y apuntar al índice = 3. Java cuenta desde CERO.
-	 * F12 on WebBrowser opens 'Inspector'
-	 * CRTL + F = opens search toolbar.   Así fue como supimos que hay 6 'fonts'.
-	 */
+
+	// Localizadores del PRIMER Escenario
+		// #1
+		By registerLinkLocator = By.linkText("REGISTER");
+		// #2
+		By registerPageLocator = By.xpath("//img[@src='images/mast_register.gif']");
+		// #3
+		By usernameLocator = By.id("email");
+		// #4
+		By passwordLocator = By.name("password");
+		// #5
+		By confirmPasswordLocator = By.cssSelector("input[name='confirmPassword']");
+		// #6
+		By registerBtnLocator = By.name("submit");
+		// #7
+		/*
+		 * Este elemento es un tag = Font, y el que necesitamos está en la 'posición = 6', de JavaScript.
+		 * Necesitamos crear una lista de WebElementS, en PLURAL, y apuntar al índice = 5. Java cuenta desde CERO.
+		 * F12 on WebBrowser opens 'Inspector'
+		 * CRTL + F = opens search toolbar.   Así fue como supimos que hay 6 'fonts'.
+		 */
+		
+	// Localizadores del SEGUNDO Escenario	
+		// #8
+		By userLocator = By.name("userName");
+		// #9
+		By passLocator =By.name("password");	
+		// #10
+		By singInBtnLocator = By.name("submit");
+		// #11
+		/*
+		 * Este elemento es un tag = Font, y el que necesitamos está en la 'posición = 4/6', de JavaScript.
+		 * Necesitamos crear una lista de WebElementS, en PLURAL, y apuntar al índice = 3. Java cuenta desde CERO.
+		 * F12 on WebBrowser opens 'Inspector'
+		 * CRTL + F = opens search toolbar.   Así fue como supimos que hay 6 'fonts'.
+		 */
 
 	@Before
 	public void setUp() throws Exception {
 		WebDriverManager.chromedriver().setup(); 	// Utilizamos la libreria WebDriverManager de bonigarcia
 		driver = new ChromeDriver();				// Invocamos el ChromeDriver
 		driver.manage().window().maximize();		// Maximiza la ventana del Google Chrome
+
 // Paso # 0 - Entrar a la url principal
 	//Mala práctica - HARD CODE de URL's de prueba en el código.	
 		driver.get("https://demo.guru99.com/test/newtours/");	// Abre nuestra url, nuestro 'System Under Test'.
 	}
 
 
-// Primer escenario, crear un nuevo usuario.
+// Primer escenario (REGISTRO), crear un nuevo usuario.
 	@Test
 	public void registerUser() throws InterruptedException {
 		// Paso # 1 - Click en el botón REGISTER.
@@ -89,7 +93,7 @@ public class MercuryTours_AutomatedTest {
 		
 	}
 	
-//Segundo escenario, hacer login con el nuevo usuario, en la página principal.
+//Segundo escenario (AUTENTICACIÓN), hacer login con el nuevo usuario, en la página principal.
 	
 	@Test
 	public void signIn() throws InterruptedException {
