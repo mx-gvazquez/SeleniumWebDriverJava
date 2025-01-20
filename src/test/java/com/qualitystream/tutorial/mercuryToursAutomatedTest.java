@@ -12,9 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
-public class MercuryTours_AutomatedTest {
+public class mercuryToursAutomatedTest {
 	
 // Declaramos la variable 'driver'
 	private WebDriver driver;
@@ -59,7 +57,6 @@ public class MercuryTours_AutomatedTest {
 
 	@Before
 	public void setUp() throws Exception {
-		WebDriverManager.chromedriver().setup(); 	// Utilizamos la libreria WebDriverManager de bonigarcia
 		driver = new ChromeDriver();				// Invocamos el ChromeDriver
 		driver.manage().window().maximize();		// Maximiza la ventana del Google Chrome
 

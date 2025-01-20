@@ -7,8 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class Base {
 	
 	private WebDriver driver;
@@ -18,7 +16,6 @@ public class Base {
 	}
 
 	public WebDriver chromeDriverConnection() {
-		WebDriverManager.chromedriver().setup(); 	// Utilizamos la libreria WebDriverManager de bonigarcia
 		driver = new ChromeDriver();				// Invocamos el ChromeDriver
 		return driver;
 	}
